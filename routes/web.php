@@ -30,3 +30,9 @@ Route::get('clearcache', function(){
     return back();
 })->middleware(['throttle:5']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('test-models', 'App\Http\Controllers\TestController@getModels');

@@ -3,10 +3,11 @@ import 'bootstrap';
 
 
 let monthSelect = document.getElementById("selectMonth");
-
-monthSelect.addEventListener("change", function() {
-    changeDayList(this.selectedIndex);
-});
+if (monthSelect) {
+    monthSelect.addEventListener("change", function () {
+        changeDayList(this.selectedIndex);
+    });
+}
 
 function changeDayList(index) {
     let items = [];
@@ -29,7 +30,7 @@ function changeDayList(index) {
 
 const mainForm = document.getElementById('main-form');
 
-mainForm.addEventListener('submit', showDate);
+if (mainForm) mainForm.addEventListener('submit', showDate);
 
 function showDate(event){
     const daySelect = document.getElementById('selectDay');

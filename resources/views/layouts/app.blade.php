@@ -23,6 +23,21 @@
                   </div>
               </div>
           </div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-3">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{ url('/') }}">Главная</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-content" aria-controls="main-menu-content" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div id="main-menu-content" class="collapse navbar-collapse">
+                  <ui class="navbar-nav mr-auto">
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/page') }}">javascript</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/info') }}">Инфо</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Вход</a></li>
+                  </ui>
+              </div>
+            </div>
+          </nav>
       </header>
 
       <div class="main-content container">
@@ -33,7 +48,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-12">
-                      ©2021 НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЯДЕРНЫЙ УНИВЕРСИТЕТ «МИФИ» (НИЯУ МИФИ)
+                      ©{{ date('Y') }} НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЯДЕРНЫЙ УНИВЕРСИТЕТ «МИФИ» (НИЯУ МИФИ)
                       ОБНИНСКИЙ ИНСТИТУТ АТОМНОЙ ЭНЕРГЕТИКИ (ИАТЭ)
                   </div>
               </div>

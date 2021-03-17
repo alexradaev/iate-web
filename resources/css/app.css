@@ -1,5 +1,7 @@
-/*import 'node_modules/bootstrap/dist//css/bootstrap.min.css';*/
-/*@import "normalize.css";*/
+:root{
+    --main-bg-color: #2d3748;
+    --sec-bg-color: #e6eff6;
+}
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -11,15 +13,19 @@ body {
     flex-direction: column;
     margin: 0 auto;
     padding: 0;
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     line-height: normal;
-    background: #e6eff6;
+    background: var(--sec-bg-color);
     hyphens: auto;
 }
 
 .main-header{
-    background: #2d3748;
+    background: var(--main-bg-color);
+}
+
+.bg-dark {
+    background: var(--main-bg-color) !important;
 }
 
 .header-text p{
@@ -35,4 +41,6 @@ body {
 
 .main-footer {
     flex-shrink: 0;
+    font-size: 0.7rem;
+    text-align: center;
 }
