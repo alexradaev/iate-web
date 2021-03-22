@@ -35,4 +35,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('test-models', 'App\Http\Controllers\TestController@getModels');
+Route::get('test-models', 'TestController@getModels');
+
+Route::resource('products', 'ProductController');

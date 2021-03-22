@@ -33,7 +33,18 @@
                   <ui class="navbar-nav mr-auto">
                       <li class="nav-item"><a class="nav-link" href="{{ url('/page') }}">javascript</a></li>
                       <li class="nav-item"><a class="nav-link" href="{{ url('/info') }}">Инфо</a></li>
-                      <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Вход</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ url('products') }}">Товары</a></li>
+                      @guest
+                          <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Вход</a></li>
+                      @else
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                  Выйти
+                              </a>
+                              <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                                  {{ csrf_field() }}
+                              </form>
+                      @endguest
                   </ui>
               </div>
             </div>
@@ -41,6 +52,22 @@
       </header>
 
       <div class="main-content container">
+
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
+          @if (\Session::has('success'))
+              <div class="alert alert-success">
+                  <p>{{ \Session::get('success') }}</p>
+              </div><br>
+          @endif
+
           @yield('content')
       </div>
 
