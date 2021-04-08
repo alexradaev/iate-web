@@ -34,6 +34,9 @@
                       <li class="nav-item"><a class="nav-link" href="{{ url('/page') }}">javascript</a></li>
                       <li class="nav-item"><a class="nav-link" href="{{ url('/info') }}">Инфо</a></li>
                       <li class="nav-item"><a class="nav-link" href="{{ url('products') }}">Товары</a></li>
+                      @admin
+                          <li class="nav-item"><a class="nav-link" href="{{ url('user') }}">Пользователи</a></li>
+                      @endadmin
                       @guest
                           <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Вход</a></li>
                       @else
@@ -83,6 +86,7 @@
       </footer>
       <script src="{{ mix('/js/manifest.js') }}"></script>
       <script src="{{ mix('/js/vendor.js') }}"></script>
+      <script src="{{ mix('/js/ckeditor/ckeditor.js') }}"></script>
       <script src="{{ mix('/js/app.js') }}"></script>
     </body>
 </html>

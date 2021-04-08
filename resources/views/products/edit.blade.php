@@ -15,8 +15,8 @@
                     <input type="text" class="form-control" id="name" name="name" value="{{$product->name}}">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="description">Описание:</label>
-                    <input type="text" class="form-control" id="description" name="description" value="{{$product->description}}">
+                    <label class="form-label" for="product-description">Описание:</label>
+                    <textarea class="form-control" id="product-description" name="description">{{$product->description}}</textarea>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="cost">Стоимость:</label>

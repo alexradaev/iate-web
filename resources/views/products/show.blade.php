@@ -17,7 +17,7 @@
             </div>
             <div class="row mb-2">
                 <div class="col col-md-2">Описание:</div>
-                <div class="col col-md-10">{{$product->description}}</div>
+                <div class="col col-md-10">{!! $product->description !!}</div>
             </div>
             <div class="row mb-4">
                 <div class="col col-md-2">Стоимость:</div>

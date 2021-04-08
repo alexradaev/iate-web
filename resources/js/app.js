@@ -2,6 +2,10 @@
 import 'bootstrap';
 
 
+//window.CKEDITOR_BASEPATH = '/js/ckeditor/';
+//import 'ckeditor/ckeditor.js';
+
+
 let monthSelect = document.getElementById("selectMonth");
 if (monthSelect) {
     monthSelect.addEventListener("change", function () {
@@ -35,4 +39,12 @@ if (mainForm) mainForm.addEventListener('submit', showDate);
 function showDate(event){
     const daySelect = document.getElementById('selectDay');
     alert("Месяц: " + monthSelect.value + "\n День: " + daySelect.value);
+}
+
+
+if (document.getElementById('product-description')){
+    let editor = CKEDITOR.replace( 'product-description',{
+        filebrowserBrowseUrl : '/elfinder/ckeditor'
+    });
+    //console.log(CKEDITOR_BASEPATH);
 }

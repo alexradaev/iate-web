@@ -17,7 +17,7 @@
           <div class="row py-1 border-bottom align-items-center">
             <div class="col-2 col-md-1">{{$product['id']}}</div>
               <div class="col-4 col-md-2"><a href="{{action('ProductController@show', $product['id'])}}">{{$product['name']}}</a></div>
-            <div class="col-4 col-md-2 col-xl-3">{{$product['description']}}</div>
+            <div class="col-4 col-md-2 col-xl-3">{!! $product['description'] !!}</div>
             <div class="col-2 col-md-2">{{$product['cost']}}</div>
             <div class="col-6 mt-1 mt-md-0 col-md-3 col-xl-2">
               <a href="{{action('ProductController@edit', $product['id'])}}" class="btn btn-secondary w-100">Редактировать</a>
